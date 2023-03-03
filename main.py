@@ -95,10 +95,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def update_chart(self):
         grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
-
-        self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
-        self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
-        self.hs_input.setValue(int(self.le_input.text()))
+        
+        if grX1 > grX0:            
+            self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
+            self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
+            self.hs_input.setValue(int(self.le_input.text()))
+        else:
+            self.hs_input.setMinimum(int(grX0 - (grX0 * 1.5)))
+            self.hs_input.setMaximum(int(grX0 + (grX0 * 0.5)))
+            self.hs_input.setValue(int(self.le_input.text()))
+            
 
         if self.ax_new:
             self.ax_new.remove()
@@ -197,9 +203,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def inicio(self):
         grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
-        self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
-        self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
-        self.hs_input.setValue(int(self.le_input.text()))
+        if grX1 > grX0:            
+            self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
+            self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
+            self.hs_input.setValue(int(self.le_input.text()))
+        else:
+            self.hs_input.setMinimum(int(grX0 - (grX0 * 1.5)))
+            self.hs_input.setMaximum(int(grX0 + (grX0 * 0.5)))
+            self.hs_input.setValue(int(self.le_input.text()))
 
         if grY0 > grY1:
             self.ax.set_ylim([(grY0-(grY0*1.55)), (grY0+(grY0*0.55))])
