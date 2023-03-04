@@ -214,11 +214,13 @@ class Ui_MainWindow(object):
 
         self.bt_InverterX = QPushButton(self.fr_esquerda)
         self.bt_InverterX.setObjectName(u"bt_InverterX")
+        self.bt_InverterX.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.gl_esquerda.addWidget(self.bt_InverterX, 2, 0, 1, 1)
 
         self.bt_InverterY = QPushButton(self.fr_esquerda)
         self.bt_InverterY.setObjectName(u"bt_InverterY")
+        self.bt_InverterY.setCursor(QCursor(Qt.PointingHandCursor))
 
         self.gl_esquerda.addWidget(self.bt_InverterY, 4, 0, 1, 1)
 

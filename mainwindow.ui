@@ -430,6 +430,9 @@
             </item>
             <item row="2" column="0">
              <widget class="QPushButton" name="bt_InverterX">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
               <property name="text">
                <string>Inverter X</string>
               </property>
@@ -437,6 +440,9 @@
             </item>
             <item row="4" column="0">
              <widget class="QPushButton" name="bt_InverterY">
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
               <property name="text">
                <string>Inverter Y</string>
               </property>
