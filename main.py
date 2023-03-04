@@ -2,13 +2,11 @@
 import sys
 from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout,
                                QFileDialog, QMessageBox)
-# from PySide6.QtGui import QIcon
 from UI_mainwindow import Ui_MainWindow
 from qt_material import apply_stylesheet
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
-# from matplotlib import pyplot as plt
 import matplotlib
 import csv
 
