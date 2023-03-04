@@ -2,13 +2,13 @@
 import sys
 from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout,
                                QFileDialog, QMessageBox)
-from PySide6.QtGui import QIcon
+# from PySide6.QtGui import QIcon
 from UI_mainwindow import Ui_MainWindow
 from qt_material import apply_stylesheet
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
 from matplotlib.figure import Figure
-from matplotlib import pyplot as plt
+# from matplotlib import pyplot as plt
 import matplotlib
 import csv
 
@@ -19,10 +19,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         MainWindow.resize(self, 1500, 800)
-
-        # teste github
-        # tesssteeee
-
+        
         self.titulo = ''
         self.arq_ok = False
         self.iniciou = False
@@ -96,27 +93,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def update_chart(self):
         grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
         
-        if grX1 > grX0:            
-            self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
-            self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
-            self.hs_input.setValue(int(self.le_input.text()))
-        else:
-            self.hs_input.setMinimum(int(grX0 - (grX0 * 1.5)))
-            self.hs_input.setMaximum(int(grX0 + (grX0 * 0.5)))
-            self.hs_input.setValue(int(self.le_input.text()))
+        self.def_limites(grX0, grX1, grY0, grY1)
             
-
         if self.ax_new:
-            self.ax_new.remove()
-
-        if grY0 > grY1:
-            self.ax.set_ylim([(grY0-(grY0*1.55)), (grY0+(grY0*0.55))])
-        else:
-            self.ax.set_ylim([(grY1-(grY1*1.55)), (grY1+(grY1*0.55))])
-        if grX0 > grX1:
-            self.ax.set_xlim([(grX0 - (grX0 * 1.55)), (grX0 + (grX0 * 0.55))])
-        else:
-            self.ax.set_xlim([(grX1 - (grX1 * 1.55)), (grX1 + (grX1 * 0.55))])
+            self.ax_new.remove()            
+                
         self.ax_new = self.ax.scatter(grInput, grOutput, s=20, edgecolor='red')
         self.ax.set_aspect(0.5/self.ax.get_data_ratio())
 
@@ -168,17 +149,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def show_message(self):
         self.msg = QMessageBox()
         self.msg.setIcon(QMessageBox.Warning)
-        self.msg.setWindowTitle('Atenção!')
+        self.msg.setWindowTitle('                       Atenção!')
         self.msg.setText(
             "Carregue um Arquivo ou edite os campos")
         self.msg.exec()
 
     def inc_dec(self):
-        self.le_input.setText(str(self.hs_input.value()))
+        self.le_input.setText(str(self.hs_input.value()))        
 
     def updSlider(self):
-        gr_ValInput = self.str_to_float(self.le_input.text())
-        self.hs_input.setValue(int(round(gr_ValInput, 3)))
+        try:
+            self.hs_input.setValue(int(self.le_input.text()))
+        except ValueError:
+            self.hs_input.setValue(0)
 
     def str_to_float(self, entrada):
         valor = entrada
@@ -200,17 +183,17 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         lista = [grInput, grX0, grX1, grY0, grY1, grOutput]
 
         return lista
+    
+    def def_limites(self, grX0, grX1, grY0, grY1):
 
-    def inicio(self):
-        grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
         if grX1 > grX0:            
             self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
             self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
-            self.hs_input.setValue(int(self.le_input.text()))
+            self.updSlider()            
         else:
             self.hs_input.setMinimum(int(grX0 - (grX0 * 1.5)))
             self.hs_input.setMaximum(int(grX0 + (grX0 * 0.5)))
-            self.hs_input.setValue(int(self.le_input.text()))
+            self.updSlider()            
 
         if grY0 > grY1:
             self.ax.set_ylim([(grY0-(grY0*1.55)), (grY0+(grY0*0.55))])
@@ -219,7 +202,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if grX0 > grX1:
             self.ax.set_xlim([(grX0 - (grX0 * 1.55)), (grX0 + (grX0 * 0.55))])
         else:
-            self.ax.set_xlim([(grX1 - (grX1 * 1.55)), (grX1 + (grX1 * 0.55))])
+            self.ax.set_xlim([(grX1 - (grX1 * 1.55)), (grX1 + (grX1 * 0.55))])    
+
+    def inicio(self):
+        grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
+        
+        self.def_limites(grX0, grX1, grY0, grY1)
 
         self.ax.plot(grX0, grX1, grY0, grY1)
         self.ax.scatter(0.0, grOutput, s=20, edgecolor='black')

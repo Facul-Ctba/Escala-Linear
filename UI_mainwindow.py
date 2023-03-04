@@ -367,9 +367,9 @@ class Ui_MainWindow(object):
         self.bt_calculate.clicked.connect(MainWindow.calculo)
         self.hs_input.valueChanged.connect(MainWindow.inc_dec)
         self.le_input.returnPressed.connect(MainWindow.calculo)
-        self.le_input.textChanged.connect(MainWindow.calculo)
         self.bt_load.clicked.connect(MainWindow.load_arquivo)
         self.bt_save.clicked.connect(MainWindow.save_arquivo)
+        self.le_input.textChanged.connect(MainWindow.calculo)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi

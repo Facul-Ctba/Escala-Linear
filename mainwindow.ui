@@ -780,22 +780,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>le_input</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>MainWindow</receiver>
-   <slot>calculo()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>496</x>
-     <y>186</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>0</x>
-     <y>169</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>bt_load</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
@@ -824,6 +808,22 @@
     <hint type="destinationlabel">
      <x>-30</x>
      <y>795</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>le_input</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>calculo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>362</x>
+     <y>162</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>517</x>
+     <y>421</y>
     </hint>
    </hints>
   </connection>
