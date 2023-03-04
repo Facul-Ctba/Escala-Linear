@@ -210,7 +210,7 @@
             <property name="verticalSpacing">
              <number>0</number>
             </property>
-            <item row="0" column="1">
+            <item row="0" column="0">
              <widget class="QLabel" name="lb_input">
               <property name="font">
                <font>
@@ -229,7 +229,48 @@
               </property>
              </widget>
             </item>
-            <item row="3" column="2">
+            <item row="2" column="0">
+             <widget class="QLabel" name="lb_X0">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>X0</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QLineEdit" name="le_input">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="1">
              <widget class="QLineEdit" name="le_X1">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
@@ -248,7 +289,7 @@
               </property>
              </widget>
             </item>
-            <item row="7" column="2">
+            <item row="7" column="1">
              <widget class="QCheckBox" name="cb_limite">
               <property name="font">
                <font>
@@ -273,124 +314,7 @@
               </property>
              </widget>
             </item>
-            <item row="5" column="1">
-             <widget class="QLabel" name="lb_Y1">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="text">
-               <string>Y1</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="2">
-             <widget class="QLineEdit" name="le_input">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 255, 255);</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QLineEdit" name="le_X0">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 255, 255);</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLabel" name="lb_X0">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="text">
-               <string>X0</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QLabel" name="lb_X1">
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true"/>
-              </property>
-              <property name="text">
-               <string>X1</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="2">
-             <widget class="QLineEdit" name="le_Y1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <family>Arial</family>
-                <pointsize>12</pointsize>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">color: rgb(255, 255, 255);</string>
-              </property>
-             </widget>
-            </item>
-            <item row="4" column="1">
+            <item row="4" column="0">
              <widget class="QLabel" name="lb_Y0">
               <property name="font">
                <font>
@@ -409,8 +333,27 @@
               </property>
              </widget>
             </item>
-            <item row="4" column="2">
-             <widget class="QLineEdit" name="le_Y0">
+            <item row="5" column="0">
+             <widget class="QLabel" name="lb_Y1">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>Y1</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="1">
+             <widget class="QLineEdit" name="le_Y1">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -428,17 +371,60 @@
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="bt_InverterX">
+            <item row="3" column="0">
+             <widget class="QLabel" name="lb_X1">
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
               <property name="text">
-               <string>Inverter X</string>
+               <string>X1</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
              </widget>
             </item>
-            <item row="4" column="0">
-             <widget class="QPushButton" name="bt_InverterY">
-              <property name="text">
-               <string>Inverter Y</string>
+            <item row="2" column="1">
+             <widget class="QLineEdit" name="le_X0">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
+             <widget class="QLineEdit" name="le_Y0">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Arial</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: rgb(255, 255, 255);</string>
               </property>
              </widget>
             </item>
@@ -752,8 +738,8 @@
    <slot>calculo()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>221</x>
-     <y>699</y>
+     <x>209</x>
+     <y>719</y>
     </hint>
     <hint type="destinationlabel">
      <x>638</x>
@@ -784,8 +770,8 @@
    <slot>calculo()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>557</x>
-     <y>181</y>
+     <x>496</x>
+     <y>186</y>
     </hint>
     <hint type="destinationlabel">
      <x>0</x>
@@ -841,38 +827,6 @@
     </hint>
    </hints>
   </connection>
-  <connection>
-   <sender>bt_InverterX</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>inverterX()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>104</x>
-     <y>245</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-1</x>
-     <y>241</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>bt_InverterY</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>inverterY()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>107</x>
-     <y>411</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-3</x>
-     <y>409</y>
-    </hint>
-   </hints>
-  </connection>
  </connections>
  <designerdata>
   <property name="gridDeltaX">
@@ -898,7 +852,5 @@
   <slot>update_chart()</slot>
   <slot>load_arquivo()</slot>
   <slot>save_arquivo()</slot>
-  <slot>inverterX()</slot>
-  <slot>inverterY()</slot>
  </slots>
 </ui>

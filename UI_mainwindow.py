@@ -118,36 +118,19 @@ class Ui_MainWindow(object):
         self.lb_input.setStyleSheet(u"")
         self.lb_input.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.gl_esquerda.addWidget(self.lb_input, 0, 0, 1, 1)
-
-        self.lb_X0 = QLabel(self.fr_esquerda)
-        self.lb_X0.setObjectName(u"lb_X0")
-        self.lb_X0.setFont(font1)
-        self.lb_X0.setStyleSheet(u"")
-        self.lb_X0.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.gl_esquerda.addWidget(self.lb_X0, 2, 0, 1, 1)
-
-        self.le_input = QLineEdit(self.fr_esquerda)
-        self.le_input.setObjectName(u"le_input")
-        sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy4.setHorizontalStretch(0)
-        sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.le_input.sizePolicy().hasHeightForWidth())
-        self.le_input.setSizePolicy(sizePolicy4)
-        self.le_input.setFont(font1)
-        self.le_input.setStyleSheet(u"color: rgb(255, 255, 255);")
-
-        self.gl_esquerda.addWidget(self.le_input, 0, 1, 1, 1)
+        self.gl_esquerda.addWidget(self.lb_input, 0, 1, 1, 1)
 
         self.le_X1 = QLineEdit(self.fr_esquerda)
         self.le_X1.setObjectName(u"le_X1")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
         sizePolicy4.setHeightForWidth(self.le_X1.sizePolicy().hasHeightForWidth())
         self.le_X1.setSizePolicy(sizePolicy4)
         self.le_X1.setFont(font1)
         self.le_X1.setStyleSheet(u"color: rgb(255, 255, 255);")
 
-        self.gl_esquerda.addWidget(self.le_X1, 3, 1, 1, 1)
+        self.gl_esquerda.addWidget(self.le_X1, 3, 2, 1, 1)
 
         self.cb_limite = QCheckBox(self.fr_esquerda)
         self.cb_limite.setObjectName(u"cb_limite")
@@ -159,15 +142,7 @@ class Ui_MainWindow(object):
         self.cb_limite.setStyleSheet(u"")
         self.cb_limite.setIconSize(QSize(20, 20))
 
-        self.gl_esquerda.addWidget(self.cb_limite, 7, 1, 1, 1)
-
-        self.lb_Y0 = QLabel(self.fr_esquerda)
-        self.lb_Y0.setObjectName(u"lb_Y0")
-        self.lb_Y0.setFont(font1)
-        self.lb_Y0.setStyleSheet(u"")
-        self.lb_Y0.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.gl_esquerda.addWidget(self.lb_Y0, 4, 0, 1, 1)
+        self.gl_esquerda.addWidget(self.cb_limite, 7, 2, 1, 1)
 
         self.lb_Y1 = QLabel(self.fr_esquerda)
         self.lb_Y1.setObjectName(u"lb_Y1")
@@ -175,24 +150,16 @@ class Ui_MainWindow(object):
         self.lb_Y1.setStyleSheet(u"")
         self.lb_Y1.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.gl_esquerda.addWidget(self.lb_Y1, 5, 0, 1, 1)
+        self.gl_esquerda.addWidget(self.lb_Y1, 5, 1, 1, 1)
 
-        self.le_Y1 = QLineEdit(self.fr_esquerda)
-        self.le_Y1.setObjectName(u"le_Y1")
-        sizePolicy4.setHeightForWidth(self.le_Y1.sizePolicy().hasHeightForWidth())
-        self.le_Y1.setSizePolicy(sizePolicy4)
-        self.le_Y1.setFont(font1)
-        self.le_Y1.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.le_input = QLineEdit(self.fr_esquerda)
+        self.le_input.setObjectName(u"le_input")
+        sizePolicy4.setHeightForWidth(self.le_input.sizePolicy().hasHeightForWidth())
+        self.le_input.setSizePolicy(sizePolicy4)
+        self.le_input.setFont(font1)
+        self.le_input.setStyleSheet(u"color: rgb(255, 255, 255);")
 
-        self.gl_esquerda.addWidget(self.le_Y1, 5, 1, 1, 1)
-
-        self.lb_X1 = QLabel(self.fr_esquerda)
-        self.lb_X1.setObjectName(u"lb_X1")
-        self.lb_X1.setFont(font1)
-        self.lb_X1.setStyleSheet(u"")
-        self.lb_X1.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-
-        self.gl_esquerda.addWidget(self.lb_X1, 3, 0, 1, 1)
+        self.gl_esquerda.addWidget(self.le_input, 0, 2, 1, 1)
 
         self.le_X0 = QLineEdit(self.fr_esquerda)
         self.le_X0.setObjectName(u"le_X0")
@@ -201,7 +168,40 @@ class Ui_MainWindow(object):
         self.le_X0.setFont(font1)
         self.le_X0.setStyleSheet(u"color: rgb(255, 255, 255);")
 
-        self.gl_esquerda.addWidget(self.le_X0, 2, 1, 1, 1)
+        self.gl_esquerda.addWidget(self.le_X0, 2, 2, 1, 1)
+
+        self.lb_X0 = QLabel(self.fr_esquerda)
+        self.lb_X0.setObjectName(u"lb_X0")
+        self.lb_X0.setFont(font1)
+        self.lb_X0.setStyleSheet(u"")
+        self.lb_X0.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gl_esquerda.addWidget(self.lb_X0, 2, 1, 1, 1)
+
+        self.lb_X1 = QLabel(self.fr_esquerda)
+        self.lb_X1.setObjectName(u"lb_X1")
+        self.lb_X1.setFont(font1)
+        self.lb_X1.setStyleSheet(u"")
+        self.lb_X1.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gl_esquerda.addWidget(self.lb_X1, 3, 1, 1, 1)
+
+        self.le_Y1 = QLineEdit(self.fr_esquerda)
+        self.le_Y1.setObjectName(u"le_Y1")
+        sizePolicy4.setHeightForWidth(self.le_Y1.sizePolicy().hasHeightForWidth())
+        self.le_Y1.setSizePolicy(sizePolicy4)
+        self.le_Y1.setFont(font1)
+        self.le_Y1.setStyleSheet(u"color: rgb(255, 255, 255);")
+
+        self.gl_esquerda.addWidget(self.le_Y1, 5, 2, 1, 1)
+
+        self.lb_Y0 = QLabel(self.fr_esquerda)
+        self.lb_Y0.setObjectName(u"lb_Y0")
+        self.lb_Y0.setFont(font1)
+        self.lb_Y0.setStyleSheet(u"")
+        self.lb_Y0.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+
+        self.gl_esquerda.addWidget(self.lb_Y0, 4, 1, 1, 1)
 
         self.le_Y0 = QLineEdit(self.fr_esquerda)
         self.le_Y0.setObjectName(u"le_Y0")
@@ -210,7 +210,17 @@ class Ui_MainWindow(object):
         self.le_Y0.setFont(font1)
         self.le_Y0.setStyleSheet(u"color: rgb(255, 255, 255);")
 
-        self.gl_esquerda.addWidget(self.le_Y0, 4, 1, 1, 1)
+        self.gl_esquerda.addWidget(self.le_Y0, 4, 2, 1, 1)
+
+        self.bt_InverterX = QPushButton(self.fr_esquerda)
+        self.bt_InverterX.setObjectName(u"bt_InverterX")
+
+        self.gl_esquerda.addWidget(self.bt_InverterX, 2, 0, 1, 1)
+
+        self.bt_InverterY = QPushButton(self.fr_esquerda)
+        self.bt_InverterY.setObjectName(u"bt_InverterY")
+
+        self.gl_esquerda.addWidget(self.bt_InverterY, 4, 0, 1, 1)
 
 
         self.verticalLayout_4.addLayout(self.gl_esquerda)
@@ -370,6 +380,8 @@ class Ui_MainWindow(object):
         self.bt_load.clicked.connect(MainWindow.load_arquivo)
         self.bt_save.clicked.connect(MainWindow.save_arquivo)
         self.le_input.textChanged.connect(MainWindow.calculo)
+        self.bt_InverterX.clicked.connect(MainWindow.inverterX)
+        self.bt_InverterY.clicked.connect(MainWindow.inverterY)
 
         QMetaObject.connectSlotsByName(MainWindow)
     # setupUi
@@ -378,12 +390,14 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"C\u00e1lculo de Escala Linear", None))
         self.lb_autor.setText(QCoreApplication.translate("MainWindow", u"Alexandre de \u00c1vila @ Todos os Direitos Reservados", None))
         self.lb_input.setText(QCoreApplication.translate("MainWindow", u"Entrada", None))
-        self.lb_X0.setText(QCoreApplication.translate("MainWindow", u"X0", None))
-        self.le_input.setText("")
         self.cb_limite.setText(QCoreApplication.translate("MainWindow", u"Limite", None))
-        self.lb_Y0.setText(QCoreApplication.translate("MainWindow", u"Y0", None))
         self.lb_Y1.setText(QCoreApplication.translate("MainWindow", u"Y1", None))
+        self.le_input.setText("")
+        self.lb_X0.setText(QCoreApplication.translate("MainWindow", u"X0", None))
         self.lb_X1.setText(QCoreApplication.translate("MainWindow", u"X1", None))
+        self.lb_Y0.setText(QCoreApplication.translate("MainWindow", u"Y0", None))
+        self.bt_InverterX.setText(QCoreApplication.translate("MainWindow", u"Inverter X", None))
+        self.bt_InverterY.setText(QCoreApplication.translate("MainWindow", u"Inverter Y", None))
         self.bt_calculate.setText(QCoreApplication.translate("MainWindow", u"Calcule", None))
         self.bt_load.setText(QCoreApplication.translate("MainWindow", u"Carregar Arquivo", None))
         self.bt_save.setText(QCoreApplication.translate("MainWindow", u"Salvar em Arquivo", None))

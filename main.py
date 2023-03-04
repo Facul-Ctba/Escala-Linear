@@ -182,6 +182,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         return lista
     
+    def inverterX(self):
+        vlr_X0 = self.le_X0.text()
+        self.le_X0.setText(self.le_X1.text())
+        self.le_X1.setText(vlr_X0)
+                
+    def inverterY(self):
+        vlr_Y0 = self.le_Y0.text()
+        self.le_Y0.setText(self.le_Y1.text())
+        self.le_Y1.setText(vlr_Y0)
+
     def def_limites(self, grX0, grX1, grY0, grY1):
 
         if grX1 > grX0:            
