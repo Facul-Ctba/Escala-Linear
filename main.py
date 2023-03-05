@@ -2,13 +2,15 @@
 import sys
 from PySide6.QtWidgets import (QApplication, QMainWindow, QVBoxLayout,
                                QFileDialog, QMessageBox)
-from UI_mainwindow import Ui_MainWindow
 from qt_material import apply_stylesheet
-from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
-from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as NavigationToolbar
+from matplotlib.backends.backend_qt5agg import (FigureCanvasQTAgg
+                                                as FigureCanvas)
+from matplotlib.backends.backend_qt5agg import (NavigationToolbar2QT
+                                                as NavigationToolbar)
 from matplotlib.figure import Figure
 import matplotlib
 import csv
+from UI_mainwindow import Ui_MainWindow
 
 
 class MainWindow(QMainWindow, Ui_MainWindow):
@@ -17,7 +19,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.setupUi(self)
 
         MainWindow.resize(self, 1500, 800)
-        
+
         self.titulo = ''
         self.arq_ok = False
         self.iniciou = False
@@ -49,11 +51,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def calculo(self):
         grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
-        if (self.arq_ok == False) and ((grX0 == grX1) or (grY0 == grY1)):
+        if (self.arq_ok is False) and ((grX0 == grX1) or (grY0 == grY1)):
             self.show_message()
             return
         else:
-            if self.iniciou == False:
+            if self.iniciou is False:
                 self.inicio()
 
         if self.le_input.isModified():
@@ -69,7 +71,8 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             return
         gr_out = (gr_m * grInput) + gr_b   # Cálculo da Saída Linear
 
-        if self.cb_limite.isChecked():     # Considerar o Limite de Y = Saída Linear
+        # Considerar o Limite de Y = Saída Linear
+        if self.cb_limite.isChecked():
             if grY1 > grY0:                # Sentido Direto
                 if gr_out > grY1:
                     gr_out = grY1
@@ -90,12 +93,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def update_chart(self):
         grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
-        
+
         self.def_limites(grX0, grX1, grY0, grY1)
-            
+
         if self.ax_new:
-            self.ax_new.remove()            
-                
+            self.ax_new.remove()
+
         self.ax_new = self.ax.scatter(grInput, grOutput, s=20, edgecolor='red')
         self.ax.set_aspect(0.5/self.ax.get_data_ratio())
 
@@ -153,7 +156,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.msg.exec()
 
     def inc_dec(self):
-        self.le_input.setText(str(self.hs_input.value()))        
+        self.le_input.setText(str(self.hs_input.value()))
 
     def updSlider(self):
         try:
@@ -181,12 +184,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         lista = [grInput, grX0, grX1, grY0, grY1, grOutput]
 
         return lista
-    
+
     def inverterX(self):
         vlr_X0 = self.le_X0.text()
         self.le_X0.setText(self.le_X1.text())
         self.le_X1.setText(vlr_X0)
-                
+
     def inverterY(self):
         vlr_Y0 = self.le_Y0.text()
         self.le_Y0.setText(self.le_Y1.text())
@@ -194,14 +197,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     def def_limites(self, grX0, grX1, grY0, grY1):
 
-        if grX1 > grX0:            
+        if grX1 > grX0:
             self.hs_input.setMinimum(int(grX1 - (grX1 * 1.5)))
             self.hs_input.setMaximum(int(grX1 + (grX1 * 0.5)))
-            self.updSlider()            
+            self.updSlider()
         else:
             self.hs_input.setMinimum(int(grX0 - (grX0 * 1.5)))
             self.hs_input.setMaximum(int(grX0 + (grX0 * 0.5)))
-            self.updSlider()            
+            self.updSlider()
 
         if grY0 > grY1:
             self.ax.set_ylim([(grY0-(grY0*1.55)), (grY0+(grY0*0.55))])
@@ -210,11 +213,11 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         if grX0 > grX1:
             self.ax.set_xlim([(grX0 - (grX0 * 1.55)), (grX0 + (grX0 * 0.55))])
         else:
-            self.ax.set_xlim([(grX1 - (grX1 * 1.55)), (grX1 + (grX1 * 0.55))])    
+            self.ax.set_xlim([(grX1 - (grX1 * 1.55)), (grX1 + (grX1 * 0.55))])
 
     def inicio(self):
         grInput, grX0, grX1, grY0, grY1, grOutput = self.valores_float()
-        
+
         self.def_limites(grX0, grX1, grY0, grY1)
 
         self.ax.plot(grX0, grX1, grY0, grY1)
