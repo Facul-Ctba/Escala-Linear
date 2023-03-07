@@ -76,13 +76,21 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             if grY1 > grY0:                # Sentido Direto
                 if gr_out > grY1:
                     gr_out = grY1
-                if gr_out < grY0:
-                    gr_out = grY0
+                if self.cb_limneg.isChecked():
+                    if gr_out < grY0:
+                        gr_out = grY0
+                else:
+                    if gr_out < 0.0:
+                        gr_out = 0.0
             elif grY1 < grY0:              # Sentido Reverso
                 if gr_out > grY0:
                     gr_out = grY0
-                if gr_out < grY1:
-                    gr_out = grY1
+                if self.cb_limneg.isChecked():
+                    if gr_out < grY1:
+                        gr_out = grY1
+                else:
+                    if gr_out < 0.0:
+                        gr_out = 0.0
 
         # Atualiza os resultados
         self.le_output.setText(str(round(gr_out, 3)))

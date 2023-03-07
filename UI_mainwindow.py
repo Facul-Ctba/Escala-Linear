@@ -224,6 +224,13 @@ class Ui_MainWindow(object):
 
         self.gl_esquerda.addWidget(self.bt_InverterY, 4, 0, 1, 1)
 
+        self.cb_limneg = QCheckBox(self.fr_esquerda)
+        self.cb_limneg.setObjectName(u"cb_limneg")
+        self.cb_limneg.setCursor(QCursor(Qt.PointingHandCursor))
+        self.cb_limneg.setChecked(True)
+
+        self.gl_esquerda.addWidget(self.cb_limneg, 7, 0, 1, 1)
+
 
         self.verticalLayout_4.addLayout(self.gl_esquerda)
 
@@ -400,6 +407,7 @@ class Ui_MainWindow(object):
         self.lb_Y0.setText(QCoreApplication.translate("MainWindow", u"Y0", None))
         self.bt_InverterX.setText(QCoreApplication.translate("MainWindow", u"Inverter X", None))
         self.bt_InverterY.setText(QCoreApplication.translate("MainWindow", u"Inverter Y", None))
+        self.cb_limneg.setText(QCoreApplication.translate("MainWindow", u"Permitir Sa\u00edda Negativa", None))
         self.bt_calculate.setText(QCoreApplication.translate("MainWindow", u"Calcule", None))
         self.bt_load.setText(QCoreApplication.translate("MainWindow", u"Carregar Arquivo", None))
         self.bt_save.setText(QCoreApplication.translate("MainWindow", u"Salvar em Arquivo", None))

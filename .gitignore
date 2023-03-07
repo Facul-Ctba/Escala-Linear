@@ -1,1 +1,3 @@
 __init__.py
+mainwindow.ui
+__pycache__/UI_mainwindow.cpython-39.pyc
