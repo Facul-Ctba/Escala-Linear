@@ -1,24 +1,20 @@
 # -*- coding: utf-8 -*-
 
-################################################################################
-## Form generated from reading UI file 'mainwindow.ui'
-##
-## Created by: Qt User Interface Compiler version 6.4.2
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
-################################################################################
+###############################################################################
+# Form generated from reading UI file 'mainwindow.ui'
+#
+# Created by: Qt User Interface Compiler version 6.4.2
+#
+# WARNING! All changes made in this file will be lost when recompiling UI file!
+###############################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QFrame, QGridLayout,
-    QHBoxLayout, QLabel, QLayout, QLineEdit,
-    QMainWindow, QPushButton, QSizePolicy, QSlider,
-    QVBoxLayout, QWidget)
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QSize, Qt)
+from PySide6.QtGui import (QCursor, QFont, QIcon)
+from PySide6.QtWidgets import (QCheckBox, QFrame, QGridLayout,
+                               QHBoxLayout, QLabel, QLayout, QLineEdit,
+                               QPushButton, QSizePolicy, QSlider,
+                               QVBoxLayout, QWidget)
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -28,11 +24,13 @@ class Ui_MainWindow(object):
         sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(MainWindow.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            MainWindow.sizePolicy().hasHeightForWidth())
         MainWindow.setSizePolicy(sizePolicy)
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        sizePolicy.setHeightForWidth(self.centralwidget.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.centralwidget.sizePolicy().hasHeightForWidth())
         self.centralwidget.setSizePolicy(sizePolicy)
         self.centralwidget.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
@@ -45,7 +43,8 @@ class Ui_MainWindow(object):
         sizePolicy1 = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.fr_principal.sizePolicy().hasHeightForWidth())
+        sizePolicy1.setHeightForWidth(
+            self.fr_principal.sizePolicy().hasHeightForWidth())
         self.fr_principal.setSizePolicy(sizePolicy1)
         self.fr_principal.setAutoFillBackground(False)
         self.fr_principal.setStyleSheet(u"")
@@ -57,7 +56,8 @@ class Ui_MainWindow(object):
         self.horizontalLayout.setContentsMargins(10, 10, 10, 10)
         self.fr_esquerda = QFrame(self.fr_principal)
         self.fr_esquerda.setObjectName(u"fr_esquerda")
-        sizePolicy1.setHeightForWidth(self.fr_esquerda.sizePolicy().hasHeightForWidth())
+        sizePolicy1.setHeightForWidth(
+            self.fr_esquerda.sizePolicy().hasHeightForWidth())
         self.fr_esquerda.setSizePolicy(sizePolicy1)
         self.fr_esquerda.setMinimumSize(QSize(319, 484))
         self.fr_esquerda.setStyleSheet(u"")
@@ -71,7 +71,8 @@ class Ui_MainWindow(object):
         sizePolicy2 = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
         sizePolicy2.setHorizontalStretch(1)
         sizePolicy2.setVerticalStretch(1)
-        sizePolicy2.setHeightForWidth(self.lb_autor.sizePolicy().hasHeightForWidth())
+        sizePolicy2.setHeightForWidth(
+            self.lb_autor.sizePolicy().hasHeightForWidth())
         self.lb_autor.setSizePolicy(sizePolicy2)
         self.lb_autor.setMaximumSize(QSize(450, 30))
         font = QFont()
@@ -90,7 +91,8 @@ class Ui_MainWindow(object):
         sizePolicy3 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy3.setHorizontalStretch(0)
         sizePolicy3.setVerticalStretch(0)
-        sizePolicy3.setHeightForWidth(self.hs_input.sizePolicy().hasHeightForWidth())
+        sizePolicy3.setHeightForWidth(
+            self.hs_input.sizePolicy().hasHeightForWidth())
         self.hs_input.setSizePolicy(sizePolicy3)
         self.hs_input.setMinimumSize(QSize(0, 50))
         self.hs_input.setCursor(QCursor(Qt.PointingHandCursor))
@@ -116,7 +118,8 @@ class Ui_MainWindow(object):
         font1.setPointSize(12)
         self.lb_input.setFont(font1)
         self.lb_input.setStyleSheet(u"")
-        self.lb_input.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_input.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_esquerda.addWidget(self.lb_input, 0, 1, 1, 1)
 
@@ -125,7 +128,8 @@ class Ui_MainWindow(object):
         sizePolicy4 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
         sizePolicy4.setHorizontalStretch(0)
         sizePolicy4.setVerticalStretch(0)
-        sizePolicy4.setHeightForWidth(self.le_X1.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_X1.sizePolicy().hasHeightForWidth())
         self.le_X1.setSizePolicy(sizePolicy4)
         self.le_X1.setFont(font1)
         self.le_X1.setStyleSheet(u"color: rgb(255, 255, 255);")
@@ -148,13 +152,15 @@ class Ui_MainWindow(object):
         self.lb_Y1.setObjectName(u"lb_Y1")
         self.lb_Y1.setFont(font1)
         self.lb_Y1.setStyleSheet(u"")
-        self.lb_Y1.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_Y1.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_esquerda.addWidget(self.lb_Y1, 5, 1, 1, 1)
 
         self.le_input = QLineEdit(self.fr_esquerda)
         self.le_input.setObjectName(u"le_input")
-        sizePolicy4.setHeightForWidth(self.le_input.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_input.sizePolicy().hasHeightForWidth())
         self.le_input.setSizePolicy(sizePolicy4)
         self.le_input.setFont(font1)
         self.le_input.setStyleSheet(u"color: rgb(255, 255, 255);")
@@ -163,7 +169,8 @@ class Ui_MainWindow(object):
 
         self.le_X0 = QLineEdit(self.fr_esquerda)
         self.le_X0.setObjectName(u"le_X0")
-        sizePolicy4.setHeightForWidth(self.le_X0.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_X0.sizePolicy().hasHeightForWidth())
         self.le_X0.setSizePolicy(sizePolicy4)
         self.le_X0.setFont(font1)
         self.le_X0.setStyleSheet(u"color: rgb(255, 255, 255);")
@@ -174,7 +181,8 @@ class Ui_MainWindow(object):
         self.lb_X0.setObjectName(u"lb_X0")
         self.lb_X0.setFont(font1)
         self.lb_X0.setStyleSheet(u"")
-        self.lb_X0.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_X0.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_esquerda.addWidget(self.lb_X0, 2, 1, 1, 1)
 
@@ -182,13 +190,15 @@ class Ui_MainWindow(object):
         self.lb_X1.setObjectName(u"lb_X1")
         self.lb_X1.setFont(font1)
         self.lb_X1.setStyleSheet(u"")
-        self.lb_X1.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_X1.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_esquerda.addWidget(self.lb_X1, 3, 1, 1, 1)
 
         self.le_Y1 = QLineEdit(self.fr_esquerda)
         self.le_Y1.setObjectName(u"le_Y1")
-        sizePolicy4.setHeightForWidth(self.le_Y1.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_Y1.sizePolicy().hasHeightForWidth())
         self.le_Y1.setSizePolicy(sizePolicy4)
         self.le_Y1.setFont(font1)
         self.le_Y1.setStyleSheet(u"color: rgb(255, 255, 255);")
@@ -199,13 +209,15 @@ class Ui_MainWindow(object):
         self.lb_Y0.setObjectName(u"lb_Y0")
         self.lb_Y0.setFont(font1)
         self.lb_Y0.setStyleSheet(u"")
-        self.lb_Y0.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_Y0.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_esquerda.addWidget(self.lb_Y0, 4, 1, 1, 1)
 
         self.le_Y0 = QLineEdit(self.fr_esquerda)
         self.le_Y0.setObjectName(u"le_Y0")
-        sizePolicy4.setHeightForWidth(self.le_Y0.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_Y0.sizePolicy().hasHeightForWidth())
         self.le_Y0.setSizePolicy(sizePolicy4)
         self.le_Y0.setFont(font1)
         self.le_Y0.setStyleSheet(u"color: rgb(255, 255, 255);")
@@ -231,7 +243,6 @@ class Ui_MainWindow(object):
 
         self.gl_esquerda.addWidget(self.cb_limneg, 7, 0, 1, 1)
 
-
         self.verticalLayout_4.addLayout(self.gl_esquerda)
 
         self.bt_calculate = QPushButton(self.fr_esquerda)
@@ -244,7 +255,8 @@ class Ui_MainWindow(object):
         self.bt_calculate.setCursor(QCursor(Qt.PointingHandCursor))
         self.bt_calculate.setStyleSheet(u"")
         icon = QIcon()
-        icon.addFile(u"Icones/calculator_22694.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"Icones/calculator_22694.png",
+                     QSize(), QIcon.Normal, QIcon.Off)
         self.bt_calculate.setIcon(icon)
         self.bt_calculate.setIconSize(QSize(32, 32))
 
@@ -272,12 +284,12 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_4.addWidget(self.bt_save)
 
-
         self.horizontalLayout.addWidget(self.fr_esquerda)
 
         self.fr_direita = QFrame(self.fr_principal)
         self.fr_direita.setObjectName(u"fr_direita")
-        sizePolicy1.setHeightForWidth(self.fr_direita.sizePolicy().hasHeightForWidth())
+        sizePolicy1.setHeightForWidth(
+            self.fr_direita.sizePolicy().hasHeightForWidth())
         self.fr_direita.setSizePolicy(sizePolicy1)
         self.fr_direita.setMinimumSize(QSize(318, 484))
         self.fr_direita.setStyleSheet(u"")
@@ -296,13 +308,15 @@ class Ui_MainWindow(object):
         self.lb_out.setObjectName(u"lb_out")
         self.lb_out.setFont(font1)
         self.lb_out.setStyleSheet(u"")
-        self.lb_out.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_out.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_direita.addWidget(self.lb_out, 0, 0, 1, 1)
 
         self.le_output = QLineEdit(self.fr_direita)
         self.le_output.setObjectName(u"le_output")
-        sizePolicy4.setHeightForWidth(self.le_output.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_output.sizePolicy().hasHeightForWidth())
         self.le_output.setSizePolicy(sizePolicy4)
         font4 = QFont()
         font4.setFamilies([u"Arial"])
@@ -317,13 +331,15 @@ class Ui_MainWindow(object):
         self.lb_m.setObjectName(u"lb_m")
         self.lb_m.setFont(font1)
         self.lb_m.setStyleSheet(u"")
-        self.lb_m.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_m.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_direita.addWidget(self.lb_m, 1, 0, 1, 1)
 
         self.le_m = QLineEdit(self.fr_direita)
         self.le_m.setObjectName(u"le_m")
-        sizePolicy4.setHeightForWidth(self.le_m.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_m.sizePolicy().hasHeightForWidth())
         self.le_m.setSizePolicy(sizePolicy4)
         font5 = QFont()
         font5.setFamilies([u"Arial"])
@@ -338,33 +354,33 @@ class Ui_MainWindow(object):
         self.lb_b.setObjectName(u"lb_b")
         self.lb_b.setFont(font1)
         self.lb_b.setStyleSheet(u"")
-        self.lb_b.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.lb_b.setAlignment(
+            Qt.AlignRight | Qt.AlignTrailing | Qt.AlignVCenter)
 
         self.gl_direita.addWidget(self.lb_b, 2, 0, 1, 1)
 
         self.le_b = QLineEdit(self.fr_direita)
         self.le_b.setObjectName(u"le_b")
-        sizePolicy4.setHeightForWidth(self.le_b.sizePolicy().hasHeightForWidth())
+        sizePolicy4.setHeightForWidth(
+            self.le_b.sizePolicy().hasHeightForWidth())
         self.le_b.setSizePolicy(sizePolicy4)
         self.le_b.setFont(font5)
         self.le_b.setStyleSheet(u"color: rgb(255, 255, 255);")
 
         self.gl_direita.addWidget(self.le_b, 2, 1, 1, 1)
 
-
         self.verticalLayout_3.addLayout(self.gl_direita)
 
         self.fr_grafico = QWidget(self.fr_direita)
         self.fr_grafico.setObjectName(u"fr_grafico")
-        sizePolicy1.setHeightForWidth(self.fr_grafico.sizePolicy().hasHeightForWidth())
+        sizePolicy1.setHeightForWidth(
+            self.fr_grafico.sizePolicy().hasHeightForWidth())
         self.fr_grafico.setSizePolicy(sizePolicy1)
         self.fr_grafico.setStyleSheet(u"")
 
         self.verticalLayout_3.addWidget(self.fr_grafico)
 
-
         self.horizontalLayout.addWidget(self.fr_direita)
-
 
         self.verticalLayout.addWidget(self.fr_principal)
 
@@ -396,23 +412,38 @@ class Ui_MainWindow(object):
     # setupUi
 
     def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"C\u00e1lculo de Escala Linear", None))
-        self.lb_autor.setText(QCoreApplication.translate("MainWindow", u"Alexandre de \u00c1vila @ Todos os Direitos Reservados", None))
-        self.lb_input.setText(QCoreApplication.translate("MainWindow", u"Entrada", None))
-        self.cb_limite.setText(QCoreApplication.translate("MainWindow", u"Limite", None))
-        self.lb_Y1.setText(QCoreApplication.translate("MainWindow", u"Y1", None))
+        MainWindow.setWindowTitle(QCoreApplication.translate(
+            "MainWindow", u"C\u00e1lculo de Escala Linear", None))
+        self.lb_autor.setText(QCoreApplication.translate(
+            "MainWindow", u"Alexandre de \u00c1vila @ Todos os Direitos \
+                                                    Reservados", None))
+        self.lb_input.setText(QCoreApplication.translate(
+            "MainWindow", u"Entrada", None))
+        self.cb_limite.setText(QCoreApplication.translate(
+            "MainWindow", u"Limite", None))
+        self.lb_Y1.setText(QCoreApplication.translate(
+            "MainWindow", u"Y1", None))
         self.le_input.setText("")
-        self.lb_X0.setText(QCoreApplication.translate("MainWindow", u"X0", None))
-        self.lb_X1.setText(QCoreApplication.translate("MainWindow", u"X1", None))
-        self.lb_Y0.setText(QCoreApplication.translate("MainWindow", u"Y0", None))
-        self.bt_InverterX.setText(QCoreApplication.translate("MainWindow", u"Inverter X", None))
-        self.bt_InverterY.setText(QCoreApplication.translate("MainWindow", u"Inverter Y", None))
-        self.cb_limneg.setText(QCoreApplication.translate("MainWindow", u"Permitir Sa\u00edda Negativa", None))
-        self.bt_calculate.setText(QCoreApplication.translate("MainWindow", u"Calcule", None))
-        self.bt_load.setText(QCoreApplication.translate("MainWindow", u"Carregar Arquivo", None))
-        self.bt_save.setText(QCoreApplication.translate("MainWindow", u"Salvar em Arquivo", None))
-        self.lb_out.setText(QCoreApplication.translate("MainWindow", u"Sa\u00edda", None))
+        self.lb_X0.setText(QCoreApplication.translate(
+            "MainWindow", u"X0", None))
+        self.lb_X1.setText(QCoreApplication.translate(
+            "MainWindow", u"X1", None))
+        self.lb_Y0.setText(QCoreApplication.translate(
+            "MainWindow", u"Y0", None))
+        self.bt_InverterX.setText(QCoreApplication.translate(
+            "MainWindow", u"Inverter X", None))
+        self.bt_InverterY.setText(QCoreApplication.translate(
+            "MainWindow", u"Inverter Y", None))
+        self.cb_limneg.setText(QCoreApplication.translate(
+            "MainWindow", u"Permitir Sa\u00edda Negativa", None))
+        self.bt_calculate.setText(
+            QCoreApplication.translate("MainWindow", u"Calcule", None))
+        self.bt_load.setText(QCoreApplication.translate(
+            "MainWindow", u"Carregar Arquivo", None))
+        self.bt_save.setText(QCoreApplication.translate(
+            "MainWindow", u"Salvar em Arquivo", None))
+        self.lb_out.setText(QCoreApplication.translate(
+            "MainWindow", u"Sa\u00edda", None))
         self.lb_m.setText(QCoreApplication.translate("MainWindow", u"m", None))
         self.lb_b.setText(QCoreApplication.translate("MainWindow", u"b", None))
     # retranslateUi
-
