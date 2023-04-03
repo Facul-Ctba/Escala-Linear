@@ -1,7 +1,0 @@
-{
-    "python.analysis.typeCheckingMode": "basic",
-    "jupyter.interactiveWindow.textEditor.executeSelection": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.enabled": true,
-    "python.linting.flake8Enabled": true
-}
